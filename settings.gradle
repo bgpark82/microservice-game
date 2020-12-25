@@ -3,4 +3,5 @@ include 'multiplication'
 include 'user'
 include 'eureka-server'
 include 'common'
+include 'gateway'
 

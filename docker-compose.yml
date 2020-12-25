@@ -11,12 +11,22 @@ services:
     networks:
       - game-network
 
+  gateway:
+    build:
+      context: gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - eureka-server
+    networks:
+      - game-network
+
   multiplication:
     build:
       context: multiplication
       dockerfile: Dockerfile
-    ports:
-      - "8081:8081"
     restart: always
     depends_on:
       - eureka-server
@@ -27,12 +37,11 @@ services:
     build:
       context: user
       dockerfile: Dockerfile
-    ports:
-      - "8082:8082"
     restart: always
     depends_on:
       - eureka-server
     networks:
       - game-network
+
 networks:
   game-network:

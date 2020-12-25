@@ -1,0 +1,22 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+
+zuul:
+  routes:
+    multiplication:
+      path: /api/multiplication/**
+      serviceId: multiplication
+      strip-prefix: false
+    user:
+      path: /api/user/**
+      serviceId: user
+      strip-prefix: false
