@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  eureka-server:
+    build:
+      context: eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - game-network
+
+  multiplication:
+    build:
+      context: multiplication
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
+    depends_on:
+      - eureka-server
+    networks:
+      - game-network
+
+  user:
+    build:
+      context: user
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    restart: always
+    depends_on:
+      - eureka-server
+    networks:
+      - game-network
+networks:
+  game-network:
