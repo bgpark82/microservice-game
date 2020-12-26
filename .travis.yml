@@ -1,6 +1,21 @@
-language: generic
+language: java
+
 services:
   - docker
+
+jdk:
+  - openjdk8
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+script: "./gradlew clean build"
 
 after_success:
   - docker build -t bgpark82/game-multiplication ./multiplication
