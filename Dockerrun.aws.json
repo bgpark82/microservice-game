@@ -1,0 +1,45 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions":[
+    {
+      "name": "eureka-server",
+      "image": "bgpark82/game-eureka-server",
+      "hostname": "eureka-server",
+      "memory":128,
+      "portMappings":[
+        {
+          "hostPort": 8761,
+          "containerPort":8761
+        }
+      ]
+    },
+    {
+      "name": "gateway",
+      "image": "bgpark82/game-gateway",
+      "hostname": "gateway",
+      "essential": false,
+      "memory":128,
+      "portMappings":[
+        {
+          "hostPort": 8000,
+          "containerPort":8000
+        }
+      ],
+      "link": ["multiplication", "user"]
+    },
+    {
+      "name": "multiplication",
+      "image": "bgpark82/game-multiplication",
+      "hostname": "multiplication",
+      "memory":128,
+      "essential": false
+    },
+    {
+      "name": "user",
+      "image": "bgpark82/game-user",
+      "hostname": "user",
+      "memory":128,
+      "essential": false
+    }
+  ]
+}
