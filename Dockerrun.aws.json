@@ -3,7 +3,7 @@
   "containerDefinitions":[
     {
       "name": "eureka-server",
-      "image": "bgpark82/game-eureka-server",
+      "image": "bgpark82/game-eureka-server:latest",
       "hostname": "eureka-server",
       "memory":128,
       "memoryReservation": 128,
@@ -17,7 +17,7 @@
     },
     {
       "name": "gateway",
-      "image": "bgpark82/game-gateway",
+      "image": "bgpark82/game-gateway:latest",
       "hostname": "gateway",
       "essential": true,
       "memory":128,
@@ -32,7 +32,7 @@
     },
     {
       "name": "multiplication",
-      "image": "bgpark82/game-multiplication",
+      "image": "bgpark82/game-multiplication:latest",
       "hostname": "multiplication",
       "memory":128,
       "memoryReservation": 128,
@@ -40,7 +40,7 @@
     },
     {
       "name": "user",
-      "image": "bgpark82/game-user",
+      "image": "bgpark82/game-user:latest",
       "hostname": "user",
       "memory":128,
       "memoryReservation": 128,
