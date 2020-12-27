@@ -12,7 +12,8 @@
           "hostPort": 8761,
           "containerPort":8761
         }
-      ]
+      ],
+      "link": ["multiplication", "user","gateway"]
     },
     {
       "name": "gateway",
