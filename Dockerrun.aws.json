@@ -7,7 +7,7 @@
       "hostname": "eureka-server",
       "memory":128,
       "memoryReservation": 128,
-      "essential": true,
+      "essential": false,
       "portMappings":[
         {
           "hostPort": 8761,
@@ -19,7 +19,7 @@
       "name": "gateway",
       "image": "bgpark82/game-gateway",
       "hostname": "gateway",
-      "essential": true,
+      "essential": false,
       "memory":128,
       "memoryReservation": 128,
       "portMappings":[
@@ -36,7 +36,7 @@
       "hostname": "multiplication",
       "memory":128,
       "memoryReservation": 128,
-      "essential": true
+      "essential": false
     },
     {
       "name": "user",
@@ -44,7 +44,7 @@
       "hostname": "user",
       "memory":128,
       "memoryReservation": 128,
-      "essential": true
+      "essential": false
     }
   ]
 }
