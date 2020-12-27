@@ -6,7 +6,6 @@
       "image": "bgpark82/game-eureka-server:latest",
       "hostname": "eureka-server",
       "memory":300,
-      "memoryReservation": 300,
       "essential": false,
       "portMappings":[
         {
@@ -21,7 +20,6 @@
       "hostname": "gateway",
       "essential": true,
       "memory":300,
-      "memoryReservation": 300,
       "portMappings":[
         {
           "hostPort": 80,
@@ -35,7 +33,6 @@
       "image": "bgpark82/game-multiplication:latest",
       "hostname": "multiplication",
       "memory":300,
-      "memoryReservation": 300,
       "essential": false
     },
     {
@@ -43,7 +40,6 @@
       "image": "bgpark82/game-user:latest",
       "hostname": "user",
       "memory":300,
-      "memoryReservation": 300,
       "essential": false
     }
   ]
