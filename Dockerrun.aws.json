@@ -19,7 +19,7 @@
       "name": "gateway",
       "image": "bgpark82/game-gateway",
       "hostname": "gateway",
-      "essential": false,
+      "essential": true,
       "memory":128,
       "memoryReservation": 128,
       "portMappings":[
