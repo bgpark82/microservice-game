@@ -5,7 +5,7 @@ This is the schedule management web application built with Spring Cloud. Time's 
 ## How to use
 This script will trigger gradle build & test and docker compose build & run sequentially  
 ```
-sh build.sh
+sh start.sh
 ```
 
 ## Stack
@@ -26,8 +26,10 @@ sh build.sh
 
 ### Server
 - Travis CI/CD
-- Code Build
-- AWS ECS
+- Docker
+- AWS ECS Fargate
+- AWS ECR
+- AWS Code Pipeline
 
 
 
